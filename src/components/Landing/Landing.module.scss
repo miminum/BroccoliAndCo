@@ -1,3 +1,51 @@
+@import './../../styles/theme.scss';
+
+$landingHeight: calc(100vh - 97px);
+
 .landingContainer {
     width: 100%;
+    min-height: $landingHeight;
+    background-color: $white;
+
+    .textContainer {
+        min-height: $landingHeight;
+        width: 100%;
+        margin: auto auto 5px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .title{
+            text-align: center;
+            width: 40%;
+            font-size: 64px;
+            font-weight: 500;
+            margin: 0;
+        }
+        .subTitle{
+            text-align: center;
+            width: 50%;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .buttonContainer {
+            text-align: center;
+            width: 50%;
+            padding-bottom: 16px;
+            .button {
+                border: 2px outset $black;
+                padding: 10px 35px;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .button:hover {
+                background-color: $black;
+                color: $white;
+
+             }
+        }
+    }
 }
